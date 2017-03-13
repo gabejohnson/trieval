@@ -1,5 +1,5 @@
 // Likely VERY inefficient port of Data.Trie of a Trie
-const S = require('sanctuary')//import S from 'sanctuary';
+import S from 'sanctuary';
 
 // (Maybe a -> Trie a -> b) -> b -> (Trie a -> b) -> String -> Trie a -> b
 function findBy_(m_t_b, b, t_b) {
@@ -44,7 +44,7 @@ class Trie {
   /* Apply */
   // Trie a ~> Trie (a -> b) -> Trie b
   ap(o) {
-    return Object.entries(o.toObject()).reduce((result, [k, f]) => {
+    return S.pairs(o.toObject()).reduce((result, [k, f]) => {
       const found = this.find(k);
       return found.isNothing ? result : result.insert(k, f(found.value));
     }, Trie.empty());
