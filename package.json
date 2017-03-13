@@ -13,7 +13,8 @@
   "scripts": {
     "build": "babel src/trie.js --out-file ./index.js --source-maps inline",
     "test": "nyc --reporter=lcov --reporter=html ava",
-    "test:ci": "ava"
+    "test:ci": "ava",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "trie",
