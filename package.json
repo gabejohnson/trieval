@@ -1,6 +1,6 @@
 {
   "name": "trieval",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A JavaScript port of Data.Trie",
   "repository": {
     "type": "git",
@@ -36,8 +36,14 @@
     "nyc": "^10.1.2"
   },
   "ava": {
-    "require": ["babel-register"],
-    "files": ["test/test-trie.js"],
-    "source": ["src/trie.js"]
+    "require": [
+      "babel-register"
+    ],
+    "files": [
+      "test/test-trie.js"
+    ],
+    "source": [
+      "src/trie.js"
+    ]
   }
 }
