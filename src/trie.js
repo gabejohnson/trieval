@@ -215,4 +215,4 @@ const flPre = 'fantasy-land';
 
 // Trie a ~> (a -> Maybe b) -> Trie b
 // Trie.prototype.filterMap = function filterMap(f) {};
-module.exports = Trie;
+export default Trie;
