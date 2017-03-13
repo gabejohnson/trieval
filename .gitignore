@@ -1,2 +1,5 @@
 node_modules/
+index.js
 .editorconfig
+coverage/
+.nyc_output/

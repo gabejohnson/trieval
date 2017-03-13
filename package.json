@@ -7,8 +7,12 @@
     "url": "https://github.com/gabejohnson/trieval.git"
   },
   "main": "index.js",
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "scripts": {
-    "test": "nyc --reporter=lcov --reporter=html ava ./test"
+    "build": "babel src/trie.js --out-file ./index.js --source-maps inline",
+    "test": "npm run build && nyc --reporter=lcov --reporter=html ava ./test"
   },
   "keywords": [
     "trie",
@@ -24,6 +28,8 @@
   },
   "devDependencies": {
     "ava": "^0.18.2",
+    "babel-cli": "^6.24.0",
+    "babel-preset-env": "^1.2.1",
     "coveralls": "^2.12.0",
     "nyc": "^10.1.2"
   }
